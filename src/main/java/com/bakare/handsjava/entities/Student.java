@@ -18,6 +18,8 @@ public class Student {
     private String email;
     private String classGrade;
     private Date enrollmentDate;
-    private String parent;
+    @ManyToOne
+    @JoinColumn(name = "parent_id")
+    private Parent parent;
     // Getters and Setters
 }
