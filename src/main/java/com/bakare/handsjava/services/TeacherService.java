@@ -29,8 +29,15 @@ public class TeacherService {
     public Teacher updateTeacher(Long id, Teacher teacher) {
         Teacher existingTeacher = teacherRepository.findById(id).orElse(null);
         if (existingTeacher != null) {
-            // Update fields here (example: name, email, etc.)
-            existingTeacher.setName(teacher.getName());
+            existingTeacher.setFirstName(teacher.getFirstName());
+            existingTeacher.setLastName(teacher.getLastName());
+            existingTeacher.setEmail(teacher.getEmail());
+            existingTeacher.setPhoneNumber(teacher.getPhoneNumber());
+            existingTeacher.setAddress(teacher.getAddress());
+            existingTeacher.setGender(teacher.getGender());
+            existingTeacher.setSubjectTaught(teacher.getSubjectTaught());
+            existingTeacher.setQualification(teacher.getQualification());
+            existingTeacher.setHireDate(teacher.getHireDate());
             return teacherRepository.save(existingTeacher);
         }
         return null;
