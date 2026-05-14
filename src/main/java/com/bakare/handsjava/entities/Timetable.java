@@ -1,7 +1,7 @@
 package com.bakare.handsjava.entities;
 
 import jakarta.persistence.*;
-import org.springframework.data.annotation.Id;
+import jakarta.persistence.Id;
 
 @Entity
 public class Timetable {
@@ -19,16 +19,4 @@ public class Timetable {
     @ManyToOne
     @JoinColumn(name = "teacher_id")
     private Teacher teacher;
-    @jakarta.persistence.Id
-    private Long id;
-
-
-    // Getters and Setters
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public Long getId() {
-        return id;
-    }
 }

@@ -2,7 +2,7 @@ package com.bakare.handsjava.entities;
 
 import jakarta.persistence.*;
 import org.hibernate.annotations.Parent;
-import org.springframework.data.annotation.Id;
+import jakarta.persistence.Id;
 
 import java.util.Date;
 

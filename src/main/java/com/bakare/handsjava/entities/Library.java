@@ -1,7 +1,7 @@
 package com.bakare.handsjava.entities;
 
 import jakarta.persistence.*;
-import org.springframework.data.annotation.Id;
+import jakarta.persistence.Id;
 
 import java.util.Date;
 
@@ -18,8 +18,6 @@ public class Library {
     private Student student;
     private Date issueDate;
     private Date returnDate;
-    @jakarta.persistence.Id
-    private Long id;
 
     // Getters and Setters
     public Library() {
@@ -39,12 +37,5 @@ public class Library {
     }
     public String getAuthor() {
         return author;
-    }
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public Long getId() {
-        return id;
     }
 }

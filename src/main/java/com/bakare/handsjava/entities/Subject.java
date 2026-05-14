@@ -1,7 +1,7 @@
 package com.bakare.handsjava.entities;
 
 import jakarta.persistence.*;
-import org.springframework.data.annotation.Id;
+import jakarta.persistence.Id;
 
 @Entity
 public class Subject {

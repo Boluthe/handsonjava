@@ -1,7 +1,7 @@
 package com.bakare.handsjava.entities;
 
 import jakarta.persistence.*;
-import org.springframework.data.annotation.Id;
+import jakarta.persistence.Id;
 
 import java.util.Date;
 
@@ -15,8 +15,6 @@ public class Exam {
     @ManyToOne
     @JoinColumn(name = "class_id")
     private Class classId;
-    @jakarta.persistence.Id
-    private Long id;
 
 
     public Class getClassId() {
@@ -50,15 +48,5 @@ public class Exam {
     public void setDate(Date date) {
         this.date = date;
     }
-
-    // Getters and Setters
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
 
 }

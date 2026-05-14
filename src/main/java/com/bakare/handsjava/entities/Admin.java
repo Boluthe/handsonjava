@@ -3,7 +3,7 @@ package com.bakare.handsjava.entities;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
-import org.springframework.data.annotation.Id;
+import jakarta.persistence.Id;
 import org.springframework.http.ResponseEntity;
 
 @Entity

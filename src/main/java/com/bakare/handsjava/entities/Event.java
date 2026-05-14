@@ -3,7 +3,7 @@ package com.bakare.handsjava.entities;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
-import org.springframework.data.annotation.Id;
+import jakarta.persistence.Id;
 
 import java.util.Date;
 
@@ -16,16 +16,5 @@ public class Event {
     private Date date;
     private String venue;
     private String description;
-    @jakarta.persistence.Id
-    private Long id;
-
-    // Getters and Setters
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public Long getId() {
-        return id;
-    }
 
 }
