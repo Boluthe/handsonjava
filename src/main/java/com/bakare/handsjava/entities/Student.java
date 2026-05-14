@@ -1,8 +1,6 @@
 package com.bakare.handsjava.entities;
 
 import jakarta.persistence.*;
-import org.hibernate.annotations.Parent;
-import jakarta.persistence.Id;
 
 import java.util.Date;
 
@@ -20,9 +18,6 @@ public class Student {
     private String email;
     private String classGrade;
     private Date enrollmentDate;
-    @ManyToOne
-    @JoinColumn(name = "parent_id")
-
-    private Parent parent;
+    private String parent;
     // Getters and Setters
 }
