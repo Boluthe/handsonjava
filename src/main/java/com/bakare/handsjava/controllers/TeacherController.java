@@ -14,16 +14,14 @@ public class TeacherController {
     private TeacherService teacherService;
 
     @GetMapping("/{id}")
-    public Teacher getTeacherById(@PathVariable Long id) {  // ✅ Correct
-        return teacherService.getTeacherById(id);  // ✅ Pass the ID
+    public Teacher getTeacherById(@PathVariable Long id) {
+        return teacherService.getTeacherById(id);
     }
-}
-
-
     @GetMapping
     public List<Teacher> getAllTeachers() {
         return teacherService.getAllTeachers();
     }
+
     @PostMapping
     public Teacher createTeacher(@RequestBody Teacher teacher) {
         return teacherService.saveTeacher(teacher);
@@ -31,6 +29,6 @@ public class TeacherController {
 
     @DeleteMapping("/{id}")
     public void deleteTeacher(@PathVariable Long id) {
-        teacherService.deleteTeacher();
+        teacherService.deleteTeacher(id);
     }
 }
